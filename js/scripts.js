@@ -1,7 +1,12 @@
 // creo 5 numeri random e li metto nella pagina html
-for (let i = 0; i <= 5; i++) {
+
+
+let ArrayNum = [];
+
+for (let i = 0; i < 5; i++) {
     const GenerateRandomNumber = parseInt(Math.floor((Math.random() * 100) + 1));
     console.log(GenerateRandomNumber);
+    ArrayNum.push(GenerateRandomNumber);
     let RandomNumber = document.getElementById('numbers');
     RandomNumber.innerText += ' ' + GenerateRandomNumber;
 }
@@ -21,9 +26,21 @@ Timing = setInterval( function() {
         clearInterval(Timing);
         Timing = null;
 
+        // chiedo all'utente i numeri
+        let GuessedNum = 0;
         for (let i = 0; i < 5; i++) {
-            const AskUser = prompt('Inserisci numero');
+            const AskUser = parseInt(prompt('Inserisci numero'));
             
-        }
-    };
+            // vedo quanti ne ha indovinati
+            if (AskUser == ArrayNum[i]) {
+                GuessedNum++;
+            } 
+        };
+        alert('Complimenti, hai indovinato', GuessedNum, 'numeri!');
+        console.log('Numeri indovinati:', GuessedNum);
+        
+        
+    }
+
+        
 }, 1000);
