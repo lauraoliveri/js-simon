@@ -1,5 +1,4 @@
-// creo 5 numeri random e faccio un ciclo
-
+// creo 5 numeri random e li metto nella pagina html
 for (let i = 0; i <= 5; i++) {
     const GenerateRandomNumber = parseInt(Math.floor((Math.random() * 100) + 1));
     console.log(GenerateRandomNumber);
@@ -7,12 +6,7 @@ for (let i = 0; i <= 5; i++) {
     RandomNumber.innerText += ' ' + GenerateRandomNumber;
 }
 
-// li metto nella pagina html
-
-// const Numbers = parseInt(document.getElementById('timer').innerText);
-
-
-// timer di 30 secondi
+// creo il timer di 30 secondi
 
 let Timing = null
 
