@@ -1,0 +1,26 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general */
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+div div {
+    font-size: 3rem;
+}
+
+#timer-title , #timer {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 2rem;
+}
